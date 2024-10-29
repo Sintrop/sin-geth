@@ -30,7 +30,7 @@ geth --identity Sequoia --datadir ./sequoia_node \
   -authrpc.addr localhost --authrpc.port 8551 \
   --http.vhosts=* --http.addr "0.0.0.0" --http.port 8545 --http=true \
   --miner.threads=1 \
-  --miner.etherbase=0x900Bd2Ed98be55299928AD1dA36b50021eC1856D \
+  --miner.etherbase=0x0000000000000000000000000000000000000000 \
   console
 ```
 
