@@ -7,6 +7,9 @@
 ### Build sin_geth
 ```
 docker build -t sin_geth .
+
+# Build withou cache
+docker build --no-cache -t sin_geth .
 ```
 
 ### Run sin_geth
