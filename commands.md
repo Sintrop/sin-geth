@@ -8,7 +8,7 @@
 ```
 docker build -t sin_geth .
 
-# Build withou cache
+# Build without cache
 docker build --no-cache -t sin_geth .
 ```
 
@@ -18,8 +18,6 @@ docker run -p=30303:30303 -p=8545:8545 -it -v /home/user/sequoia_volume:/go-sint
 
 ## Change /home/user/sequoia_volume to your dir
 ```
-
-
 # GETH
 
 ### Start a node
@@ -36,7 +34,13 @@ geth --identity Sequoia --datadir ./sequoia_node \
   --miner.etherbase=0x0000000000000000000000000000000000000000 \
   console
 ```
+### Operate network
 
+```
+balance = web3.fromWei(eth.getBalance("0x0000000000000000000000000000000000000000), "ether");
+eth.blockNumber
+web3.eth.getBlock(eth.blockNumber)
+```
 ## MINER
 
 ### Start and stop mining
