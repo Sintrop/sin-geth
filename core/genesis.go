@@ -317,8 +317,6 @@ func configOrDefault(g *genesisT.Genesis, ghash common.Hash) ctypes.ChainConfigu
 		return params.SepoliaChainConfig
 	case ghash == params.GoerliGenesisHash:
 		return params.GoerliChainConfig
-	case ghash == params.MordorGenesisHash:
-		return params.MordorChainConfig
 	case ghash == params.SepoliaGenesisHash:
 		return params.SepoliaChainConfig
 	case ghash == params.MintMeGenesisHash:
@@ -431,8 +429,6 @@ func CommitGenesisState(db ethdb.Database, triedb *triedb.Database, blockhash co
 			genesis = params.DefaultGoerliGenesisBlock()
 		case params.SepoliaGenesisHash:
 			genesis = params.DefaultSepoliaGenesisBlock()
-		case params.MordorGenesisHash:
-			genesis = params.DefaultMordorGenesisBlock()
 		case params.MintMeGenesisHash:
 			genesis = params.DefaultMintMeGenesisBlock()
 		case params.HoleskyGenesisHash:

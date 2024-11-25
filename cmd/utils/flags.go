@@ -1221,8 +1221,6 @@ func setBootstrapNodes(ctx *cli.Context, cfg *p2p.Config) {
 			urls = params.ClassicBootnodes
 		case ctx.Bool(MintMeFlag.Name):
 			urls = params.MintMeBootnodes
-		case ctx.Bool(MordorFlag.Name):
-			urls = params.MordorBootnodes
 		case ctx.Bool(SepoliaFlag.Name):
 			urls = params.SepoliaBootnodes
 		case ctx.Bool(SequoiaFlag.Name):
@@ -1260,8 +1258,6 @@ func setBootstrapNodesV5(ctx *cli.Context, cfg *p2p.Config) {
 		urls = SplitAndTrim(ctx.String(BootnodesFlag.Name))
 	case ctx.IsSet(ClassicFlag.Name):
 		urls = params.ClassicBootnodes
-	case ctx.IsSet(MordorFlag.Name):
-		urls = params.MordorBootnodes
 	case ctx.Bool(GoerliFlag.Name):
 		urls = params.GoerliBootnodes
 	case ctx.Bool(MintMeFlag.Name):
@@ -2208,8 +2204,6 @@ func SetEthConfig(ctx *cli.Context, stack *node.Node, cfg *ethconfig.Config) {
 		SetDNSDiscoveryDefaults(cfg, params.GoerliGenesisHash)
 	case ctx.Bool(ClassicFlag.Name):
 		SetDNSDiscoveryDefaults2(cfg, params.ClassicDNSNetwork1)
-	case ctx.Bool(MordorFlag.Name):
-		SetDNSDiscoveryDefaults2(cfg, params.MordorDNSNetwork1)
 	default:
 		// No --<chain> flag was given.
 	}
@@ -2531,8 +2525,6 @@ func genesisForCtxChainConfig(ctx *cli.Context) *genesisT.Genesis {
 		genesis = params.DefaultGenesisBlock()
 	case ctx.Bool(ClassicFlag.Name):
 		genesis = params.DefaultClassicGenesisBlock()
-	case ctx.Bool(MordorFlag.Name):
-		genesis = params.DefaultMordorGenesisBlock()
 	case ctx.Bool(SepoliaFlag.Name):
 		genesis = params.DefaultSepoliaGenesisBlock()
 	case ctx.Bool(SequoiaFlag.Name):
