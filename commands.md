@@ -34,6 +34,23 @@ geth --identity Sequoia --datadir ./sequoia_node \
   --miner.etherbase=0x0000000000000000000000000000000000000000 \
   console
 ```
+
+### Start a archive node
+```
+geth --identity Sequoia --datadir ./sequoia_node \
+  --sequoia \
+  --syncmode "full" \
+  --networkid 1500 \
+  --cache=1024 \
+  --port 30303 \
+  --authrpc.addr localhost --authrpc.port 8551 \
+  --http.vhosts=* --http.addr "0.0.0.0" --http.port 8545 --http=true --http.api debug,net,eth,web3,txpool --ws=true --ws.addr 0.0.0.0 --ws.port 8546 --ws.origins "*" \
+  --miner.threads=1 \
+  --miner.etherbase=0x0000000000000000000000000000000000000000 \
+  --gcmode=archive \
+  console
+```
+
 ### Operate network
 
 ```
