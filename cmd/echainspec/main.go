@@ -41,7 +41,6 @@ var chainspecFormats = func() []string {
 
 var defaultChainspecValues = map[string]ctypes.Configurator{
 	"classic": params.DefaultClassicGenesisBlock(),
-	"mordor":  params.DefaultMordorGenesisBlock(),
 
 	"foundation": params.DefaultGenesisBlock(),
 	"goerli":     params.DefaultGoerliGenesisBlock(),

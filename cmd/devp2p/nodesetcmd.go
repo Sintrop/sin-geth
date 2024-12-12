@@ -240,9 +240,6 @@ func ethFilter(args []string) (nodeFilter, error) {
 	case "classic":
 		gb := core.GenesisToBlock(params.DefaultGenesisBlock(), nil)
 		filter = forkid.NewStaticFilter(params.ClassicChainConfig, gb)
-	case "mordor":
-		gb := core.GenesisToBlock(params.DefaultMordorGenesisBlock(), nil)
-		filter = forkid.NewStaticFilter(params.MordorChainConfig, gb)
 	case "mintme":
 		gb := core.GenesisToBlock(params.DefaultMintMeGenesisBlock(), nil)
 		filter = forkid.NewStaticFilter(params.MintMeChainConfig, gb)

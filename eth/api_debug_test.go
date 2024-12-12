@@ -227,8 +227,6 @@ func TestStorageRangeAt(t *testing.T) {
 
 func getChainConfiguratorForTesting(name string) ctypes.ChainConfigurator {
 	switch name {
-	case "mordor":
-		return params.MordorChainConfig
 	case "classic":
 		return params.ClassicChainConfig
 	default:
@@ -260,7 +258,6 @@ func TestCloneChainConfigForTracing(t *testing.T) {
 
 	_ = cc.SetChainID(big.NewInt(42))
 
-	assert.Equal(t, uint64(63), params.MordorChainConfig.GetChainID().Uint64(), "way 2") // original unmutated
 	assert.Equal(t, uint64(42), cc.GetChainID().Uint64(), "way 2")                       // copy mutated
 }
 
