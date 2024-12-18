@@ -26,8 +26,8 @@ import (
 var (
 	// MordorChainConfig is the chain parameters to run a node on the Ethereum Classic Mordor test network (PoW).
 	SequoiaChainConfig = &coregeth.CoreGethChainConfig{
-		NetworkID: 1500,
-		ChainID:   big.NewInt(1500),
+		NetworkID: 1600,
+		ChainID:   big.NewInt(1600),
 		Ethash:    new(ctypes.EthashConfig),
 
 		EIP2FBlock: big.NewInt(0),
