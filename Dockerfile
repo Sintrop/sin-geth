@@ -26,7 +26,7 @@ RUN apt install ca-certificates
 EXPOSE 8545 8546 30303 30303/udp
 ENTRYPOINT ["/bin/bash"]
 
-RUN mkdir sequoia_node
+RUN mkdir sintrop_node
 
 # Add some metadata labels to help programatic image consumption
 ARG COMMIT=""

@@ -24,10 +24,10 @@ import (
 )
 
 var (
-	// SequoiaChainConfig is the chain parameters to run a node on the Sintrop test network (PoW).
-	SequoiaChainConfig = &coregeth.CoreGethChainConfig{
-		NetworkID: 1600,
-		ChainID:   big.NewInt(1600),
+	// SintropChainConfig is the chain parameters to run a node on the Sintrop mainnet network (PoW).
+	SintropChainConfig = &coregeth.CoreGethChainConfig{
+		NetworkID: 15000,
+		ChainID:   big.NewInt(15000),
 		Ethash:    new(ctypes.EthashConfig),
 
 		EIP2FBlock: big.NewInt(0),
